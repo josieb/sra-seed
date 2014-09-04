@@ -2,6 +2,7 @@ sra-seed
 ========
 
 File Layout:
+
     bin/server
     lib/
     web/
@@ -18,19 +19,19 @@ File Layout:
         index.erb # Serve /lib/require and stylesheets.
 
 ruby gems:
+
 - eventmachine
 - json
 - rake
 - sinatra
 
 js libs:
-# project management
-- bower
+
+- bower # project management
 - grunt
 - grunt-cli
 - node
-# app
-- angular
+- angular # app
 - angular-strap
 - bootstrap
 - d3
@@ -42,7 +43,6 @@ js libs:
 - require
 - slider
 - underscore
-# experimental
-- express
+- express # experimental
 - impress
 - ui-router
