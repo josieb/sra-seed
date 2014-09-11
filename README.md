@@ -1,6 +1,8 @@
 sra-seed
 ========
 
+#TODO: add gemspec/gemfile
+
 File Layout:
 
     bin/server
@@ -22,8 +24,10 @@ ruby gems:
 
 - eventmachine
 - json
+- rack
 - rake
 - sinatra
+- thin
 
 js libs:
 
