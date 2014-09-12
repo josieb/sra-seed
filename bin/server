@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+module Server
+  def self.run(command)
+    case command
+    when 'start'
+      system('rackup conf/config.ru -s thin')
+    else
+      puts USAGE
+      exit(1)
+    end
+  end
+end
+
+USAGE =<<-EOS
+  Usage: #{$0} <command>
+  Commands: start, stop, restart, status
+EOS
+
+if ( ARGV.empty? || ARGV[0].include?('-h') )
+  puts USAGE
+  exit(1)
+end
+
+Server.run(ARGV[0]) if $0 == __FILE__

@@ -10,7 +10,7 @@ task :workspace => 'target' do
   FileUtils.cp_r('web', 'target', :verbose => true)
 end
 
-desc "Remove the workspace"
+desc 'Remove the workspace'
 task :clean do
   FileUtils.rm_rf('target', :verbose => true)
 end

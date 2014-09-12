@@ -1,8 +1,6 @@
 sra-seed
 ========
 
-#TODO: add gemspec/gemfile
-
 File Layout:
 
     bin/server
@@ -22,7 +20,7 @@ File Layout:
 
 ruby gems:
 
-- eventmachine
+- bundler
 - json
 - rack
 - rake

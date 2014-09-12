@@ -6,8 +6,11 @@ require 'sinatra/base'
 module ServerApp
   module Routes
     def self.registered(app)
-      # @param [String] entity
+      # @options [Hash] params
+      # @options params [String] :entity
       app.get '/api/entities/:entity' do
+        content_type 'application/json'
+
         entries = []
       
         Random.rand(5).times do
@@ -17,12 +20,17 @@ module ServerApp
         return entries.to_json
       end
       
-      # @param [Integer] max
+      # @options [Hash] params
+      # @options params [String] :max
       app.get '/api/numbers' do
+        content_type 'application/json'
+
         return Random.rand(10).times.map { Random.rand(params[:max] || 1000) }.to_json
       end
       
-      app.get '//' do
+      app.get %r{/app/([\w]+)} do
+        content_type 'text/html'
+
         erb :index
       end
     end
