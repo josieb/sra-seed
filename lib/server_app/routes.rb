@@ -27,8 +27,12 @@ module ServerApp
 
         return Random.rand(10).times.map { Random.rand(params[:max] || 1000) }.to_json
       end
+
+      app.get '/' do
+        redirect to('/app')
+      end
       
-      app.get %r{/app/([\w]+)} do
+      app.get %r{/app(\/.*)?} do
         content_type 'text/html'
 
         erb :index

@@ -3,18 +3,18 @@
 require.config({
   baseUrl: '/',
   paths: {
-    angular: 'lib/angularjs/angular'
+    'angular': 'lib/angular/angular',
+    'uiRouter': 'lib/angular-ui-router/release/angular-ui-router'
   },
   shim: {
-    'angular': {exports: 'angular'}
+    'angular': {exports: 'angular'},
+    'uiRouter': {deps: ['angular']}
   },
   priority: ['angular']
 });
 
-require(['angular', 'app'], function(angular, app) {
-  var $html = angular.element( document.getElementsByTagName('html')[0] );
-
-  angular.element().ready(function() {
-    angular.resumeBootstrap([app['clientApp']]);
+require(['angular', 'app', 'routes'], function(angular) {
+  angular.element(document).ready(function() {
+    angular.bootstrap(document, ['clientApp']);
   });
 });
