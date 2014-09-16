@@ -1,0 +1,29 @@
+{
+  "name": "sra-seed",
+  "version": "0.0.0",
+  "homepage": "https://github.com/josieb/sra-seed",
+  "description": "A seed for a full-stack web app featuring Sinatra and AngularJS.",
+  "main": "web/assets/main.js",
+  "keywords": [
+    "sinatra",
+    "angular",
+    "angularjs",
+    "requirejs"
+  ],
+  "authors": [
+    "joseph.baham@gmail.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.11",
+    "requirejs": "~2.1.15"
+  }
+}
