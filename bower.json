@@ -2,7 +2,7 @@
   "name": "sra-seed",
   "version": "0.0.0",
   "homepage": "https://github.com/josieb/sra-seed",
-  "description": "A seed for a full-stack web app featuring Sinatra and AngularJS.",
+  "description": "A seed for a full-stack modular web app featuring Sinatra and AngularJS.",
   "main": "web/assets/main.js",
   "keywords": [
     "sinatra",

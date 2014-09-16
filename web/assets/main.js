@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * Within requirejs's callback, bootstrap the angular app upon document
+ * ready.
+ */
 require.config({
   baseUrl: '/',
   paths: {

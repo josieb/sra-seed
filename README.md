@@ -1,40 +1,29 @@
 sra-seed
 ========
 
-File Layout:
+A seed for a full-stack modular web app featuring Sinatra and AngularJS.
 
-    bin/server
+## Directory Layout
+
+```
+bin/server
+conf/config.ru
+lib/server_app.rb
+web/
+  assets/
     lib/
-    web/
-      assets/
-        lib/
-        modules/
-        app.js # Define the angular modules and constants.
-        main.js # Within require's callback, bootstrap the angular app upon document ready.
-        main.css
-        routes.js # Configure the angular location provider and route provider.
-      spec/
-      views/
-        index.erb # Serve /lib/require and stylesheets.
+    modules/
+      module1/
+        module1.html
+        module1.js
+    app.js # Define the angular module.
+    main.css
+    main.js # Within requirejs's callback, bootstrap the angular app upon document ready.
+    routes.js # Configure the angular location provider and route provider.
+  views/
+    index.erb # Serve /lib/require and stylesheets.
+```
 
-js libs:
+## TODO
 
-- bower # project management
-- grunt
-- grunt-cli
-- node
-- angular # app
-- angular-strap
-- bootstrap
-- d3
-- font-awesome
-- jasmine
-- jquery
-- moment
-- ng-grid
-- require
-- slider
-- underscore
-- express # experimental
-- impress
-- ui-router
+* Add support for testing

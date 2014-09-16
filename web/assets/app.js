@@ -1,5 +1,6 @@
 'use strict';
 
+/* Define the angular module, specifying any sub-modules as dependencies. */
 define([
   'angular',
   'uiRouter',
