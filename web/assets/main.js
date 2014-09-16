@@ -4,7 +4,8 @@ require.config({
   baseUrl: '/',
   paths: {
     'angular': 'lib/angular/angular',
-    'uiRouter': 'lib/angular-ui-router/release/angular-ui-router'
+    'uiRouter': 'lib/angular-ui-router/release/angular-ui-router',
+    'underscore': 'lib/underscore/underscore'
   },
   shim: {
     'angular': {exports: 'angular'},

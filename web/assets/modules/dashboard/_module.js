@@ -1,20 +1,27 @@
 'use strict';
 
-define(['angular', './DashboardController'],
-function(angular, DashboardController) {
+define([
+  'angular',
+  './DashboardController',
+  './DashboardService'
+], function(
+  angular,
+  DashboardController,
+  DashboardService
+) {
   var dashboardModule = angular.module('clientApp.dashboard', []);
 
-  dashboardModule.config(['$stateProvider',
-  function($stateProvider) {
+  dashboardModule.config(['$stateProvider', 'prefixUrl',
+  function($stateProvider, prefixUrl) {
     $stateProvider
       .state('dashboard', {
-        url: '/app' + '/dashboard',
+        url: prefixUrl('/dashboard'),
         templateUrl: '/modules/dashboard/dashboard.html',
         controller: DashboardController
       });
   }]);
 
-  dashboardModule.controller('DashboardController', DashboardController);
+  dashboardModule.factory('DashboardService', DashboardService);
 
   return dashboardModule;
 });

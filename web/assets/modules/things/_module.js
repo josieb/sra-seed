@@ -1,15 +1,27 @@
 'use strict';
 
-define(['angular'], function(angular) {
-  var dashboardModule = angular.module('clientApp.things', []);
+define([
+  'angular',
+  './ThingsController',
+  './ThingsService'
+], function(
+  angular,
+  ThingsController,
+  ThingsService
+) {
+  var thingsModule = angular.module('clientApp.things', []);
 
-  dashboardModule.config(['$stateProvider',
-  function($stateProvider) {
+  thingsModule.config(['$stateProvider', 'prefixUrl',
+  function($stateProvider, prefixUrl) {
     $stateProvider
       .state('things', {
-        url: '/app' + '/things'
+        url: prefixUrl('/things'),
+        templateUrl: '/modules/things/things.html',
+        controller: ThingsController
       });
   }]);
 
-  return dashboardModule;
+  thingsModule.factory('ThingsService', ThingsService);
+
+  return thingsModule;
 });

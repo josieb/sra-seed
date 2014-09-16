@@ -16,14 +16,16 @@ define(['app'], function(app) {
 
     $stateProvider
       .state('default', {
-        url: '/app',
-        template: '<h3>This is the default view.</h3>'
+        url: prefixUrl(),
+        template: '<h3>This is the default view.</h3>' +
+          '<p>Try the <a href="/app/dashboard">dashboard</a> view.</p>' +
+          '<p>Or possibly the <a href="/app/things">things</a> view.</p>'
       })
       .state('not-found', {
-        url: '/app' + '/not-found',
+        url: prefixUrl('/not-found'),
         template: "<h3>This view doesn't exist.</h3>"
       });
 
-    $urlRouterProvider.otherwise('/app' + '/not-found');
+    $urlRouterProvider.otherwise( prefixUrl('/not-found') );
   }]);
 });
